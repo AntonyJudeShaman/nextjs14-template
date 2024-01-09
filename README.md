@@ -26,6 +26,6 @@ Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.
 
 ## Acknowledgements
 
-This template is based on the [https://github.com/shadcn-ui/next-template](next-template) by [https://ui.shadcn.com](Shadcn).
+This template is based on the [next-template](https://github.com/shadcn-ui/next-template) by [Shadcn](https://ui.shadcn.com).
 
-Modifications and improvements by [https://github.com/AntonyJudeShaman](Antony Jude Shaman).
+Modifications and improvements by [Antony Jude Shaman](https://github.com/AntonyJudeShaman).
