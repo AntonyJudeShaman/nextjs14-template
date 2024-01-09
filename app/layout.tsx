@@ -8,6 +8,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { GeistSans } from 'geist/font/sans'
 import { SiteFooter } from "@/components/site-footer"
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   // metadataBase: new URL(siteConfig.url).origin,
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <SiteFooter />
             </div>
             <TailwindIndicator />
+            <Analytics/>
           </ThemeProvider>
         </body>
       </html>
