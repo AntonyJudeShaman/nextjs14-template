@@ -5,7 +5,7 @@ A Next.js 14 template for building apps with Radix UI and Tailwind CSS.
 ## Usage
 
 ```bash
-npx create-next-app -e https://github.com/shadcn/next-template
+npx create-next-app -e https://github.com/AntonyJudeShaman/nextjs14-template.git
 ```
 
 ## Features
@@ -23,3 +23,9 @@ npx create-next-app -e https://github.com/shadcn/next-template
 ## License
 
 Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+
+## Acknowledgements
+
+This template is based on the [https://github.com/shadcn-ui/next-template](next-template) by [https://ui.shadcn.com](Shadcn).
+
+Modifications and improvements by [https://github.com/AntonyJudeShaman](Antony Jude Shaman).
