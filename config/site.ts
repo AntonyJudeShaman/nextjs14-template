@@ -11,11 +11,11 @@ export const siteConfig = {
     },
     {
       title: "About",
-      href: "/",
+      href: "/about",
     },
     {
       title: "Blogs",
-      href: "/",
+      href: "/blogs",
     },
   ],
   links: {

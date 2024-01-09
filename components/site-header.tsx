@@ -6,6 +6,8 @@ import { MainNav } from '@/components/main-nav'
 import { useEffect, useState } from 'react'
 import '@/styles/hamburger.css'
 import { MobileHeader } from './mobile-nav'
+import { buttonVariants } from './ui/button'
+import { ThemeToggle } from './theme-toggle'
 
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,8 +39,41 @@ export function SiteHeader() {
         </Link>
         <div className="flex flex-1 relative items-center justify-end space-x-8 ">
           <MainNav items={siteConfig.mainNav} className="" />
-
-          <div className="items-center ">
+          <div>
+            {' '}
+            <Link
+              href={siteConfig.links.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div
+                className={buttonVariants({
+                  size: 'icon',
+                  variant: 'ghost',
+                })}
+              >
+                <Icons.gitHub className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </div>
+            </Link>
+            <Link
+              href={siteConfig.links.linkedin}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div
+                className={buttonVariants({
+                  size: 'icon',
+                  variant: 'ghost',
+                })}
+              >
+                <Icons.linkedin className="h-5 w-5 fill-current" />
+                <span className="sr-only">Twitter</span>
+              </div>
+            </Link>
+            <ThemeToggle/>
+          </div>
+          <div className="items-center md:hidden block">
             <MobileHeader />
           </div>
         </div>{' '}

@@ -32,7 +32,7 @@ export function MobileHeader() {
     <div className=" flex items-center">
       {isHydrated && <ThemeToggle />}
       <Drawer>
-        <DrawerTrigger>
+        <DrawerTrigger onClick={() => setmobileNav(true)}>
           <label className="hamburger invert dark:invert-0 cursor-pointer">
             <svg viewBox="0 0 32 32">
               <path
@@ -43,36 +43,38 @@ export function MobileHeader() {
             </svg>
           </label>
         </DrawerTrigger>
-        <DrawerContent className="bg-gradient-to-br dark:from-slate-950 dark:to-indigo-950 from-slate-200 to-indigo-100">
-          <DrawerClose className="ml-2 flex container object-contain text-right justify-end">
-            <Button variant="ghost">
-              <Icons.close className="h-8 w-8 text-black/80 dark:text-foreground" />
-            </Button>
-          </DrawerClose>
-          <DrawerDescription className="text-[3.5rem] mt-[7rem] container">
-            <DrawerHeader>
-              <DrawerTitle className=" text-left justify-start flex -ml-3">
-                Menu
-              </DrawerTitle>
-            </DrawerHeader>
-            {navLinks?.map(
-              (item, index) =>
-                item.href && (
-                  <div key={index}>
-                    <Link href={item.href}>
-                      <p
+        {mobileNav && (
+          <DrawerContent className="bg-gradient-to-br duration-300 dark:from-slate-950 dark:to-indigo-950 from-slate-200 to-indigo-100">
+            <DrawerClose className="ml-2 flex container object-contain text-right justify-end">
+              <Button variant="ghost">
+                <Icons.close className="h-8 w-8 text-black/80 dark:text-foreground" />
+              </Button>
+            </DrawerClose>
+            <DrawerDescription className="text-[3.5rem] mt-[7rem] container">
+              <DrawerHeader>
+                <DrawerTitle className=" text-left justify-start flex -ml-3">
+                  Menu
+                </DrawerTitle>
+              </DrawerHeader>
+              {navLinks?.map(
+                (item, index) =>
+                  item.href && (
+                    <div key={index}>
+                      <Link
+                        href={item.href}
+                        onClick={() => setmobileNav(false)}
                         className={cn(
                           `flex items-center text-black/80 font-dmsans caret-teal-500 font-extralight mt-[1rem] dark:text-foreground`,
                         )}
                       >
                         {item.title}
-                      </p>
-                    </Link>
-                  </div>
-                ),
-            )}
-          </DrawerDescription>
-        </DrawerContent>
+                      </Link>
+                    </div>
+                  ),
+              )}
+            </DrawerDescription>
+          </DrawerContent>
+        )}
       </Drawer>
     </div>
   )
